@@ -4,6 +4,8 @@ const forecast = require('../utils/forecast')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT  || 8080
+
 console.log("main directory:"+__dirname)
 console.log("main file:"+__filename)
 // define paths for express config 
@@ -86,5 +88,5 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(8080, () => {  console.log(' server is up on port 8080')})
+app.listen(port, () => {  console.log(' server is up on port ' + port)})
 

@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = "from javaScript"
     messageTwo.textContent = "messageTwo"
 
-    fetch('http://localhost:8080/weather?address='+location, {mode: 'no-cors'}).then((response) => {
+    fetch('/weather?address='+location, {mode: 'no-cors'}).then((response) => {
         response.json().then((data) => {
                 if (data.error) {
                     console.log(data.error)
